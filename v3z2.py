@@ -51,7 +51,7 @@ projektil = ProjectileRK4(
     koef=0.08
 )
 
-dt = 0.01
+dt = 0.1
 
 #euler
 xe, ye, domet_e = projektil.euler(dt)

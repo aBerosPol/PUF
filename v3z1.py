@@ -72,10 +72,16 @@ for dt in dt_values:
     x, y, domet = projektil.euler(dt)
     pyplot.plot(x, y, label=f"dt = {dt}, (Domet{domet:.1f}m)") #domet:.1f kaze da ce bit float i da sadrzi samo jedno mjesto nakon decimalnog zareza
 
-    if prethodni_domet != 0 and abs (domet - prethodni_domet) < 0.5:
-        print (f"Korak sa dt = {dt} je najprecizniji od koristenih.")
+    if prethodni_domet != 0:
+        razlika = abs (domet - prethodni_domet)
+        print(f"dt: {dt} | Trenutni domet: {domet:.2f} | Razlika: {razlika:.2f}")
+
+        if razlika < 1.5:
+            print(f"Korak s dt = {dt} je dovoljno precizan.")
 
     prethodni_domet = domet
+
+#kod gleda koliko se polozaj tijela promijenio u odnosu na prethodni po razlicitim vremenskim intervalima
 
 pyplot.title("Kosi hitac s otporom zraka - Eulerova metoda")
 pyplot.xlabel("x [m]")
