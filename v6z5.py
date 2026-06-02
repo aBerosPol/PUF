@@ -20,13 +20,12 @@ def analiza(podaci, naziv):
 
     # relativna razlika
     rel_razlika = abs(s - sigmaN) / s * 100
-    #/AI
 
     print(f"\n--- {naziv} ---")
     print(f"Broj mjerenja n = {n}")
     print(f"Srednja vrijednost x̄ = {avg:.6f}")
     print(f"σ_n (ddof=0) = {sigmaN:.6f}")
-    print(f"s   (ddof=1) = {s:.6f}")
+    print(f"s (ddof=1) = {s:.6f}")
     print(f"Relativna razlika = {rel_razlika:.6f}%")
 
 #AI
